@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>PPSH × CSR · School Presentation</title>
 <meta name="description" content="National PingPei Senior High School presentation for Colegio de Sta. Rosa-Makati — online exchange meeting, October 2026.">
-<link rel="icon" href="assets/logo/ppsh-logo.png">
+<link rel="icon" href="assets/logo/ppsh-logo.webp">
 <style>
 /* ========== Design tokens ========== */
 :root{
@@ -29,6 +29,8 @@
 html,body{height:100%;background:#14203f;overflow:hidden}
 body{font-family:var(--font-body);color:var(--ink);-webkit-font-smoothing:antialiased}
 img{display:block}
+img[data-src]{opacity:0}
+img.ld{opacity:1;transition:opacity .5s ease}
 
 /* ========== 舞台：固定 1920×1080，依視窗等比縮放 ========== */
 #stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:center center;background:var(--paper);overflow:hidden}
@@ -284,9 +286,9 @@ h2.md{font-size:76px;line-height:1.08}
 <section class="slide cover" data-label="School Presentation">
   <div class="left">
     <div class="logos rise">
-      <figure><img src="assets/logo/ppsh-logo.png" alt="National PingPei Senior High School logo"><figcaption>PPSH<br>Pingtung, Taiwan</figcaption></figure>
+      <figure><img src="assets/logo/ppsh-logo.webp" alt="National PingPei Senior High School logo"><figcaption>PPSH<br>Pingtung, Taiwan</figcaption></figure>
       <span class="vr"></span>
-      <figure><img src="assets/logo/csr-logo.png" alt="Colegio de Sta. Rosa-Makati logo"><figcaption>CSR<br>Makati, Philippines</figcaption></figure>
+      <figure><img src="assets/logo/csr-logo.webp" alt="Colegio de Sta. Rosa-Makati logo"><figcaption>CSR<br>Makati, Philippines</figcaption></figure>
     </div>
     <h1 class="rise d1">National PingPei<br><em>Senior High</em> School</h1>
     <p class="sub rise d2">School Presentation for Colegio de Sta. Rosa&#8209;Makati</p>
@@ -294,7 +296,7 @@ h2.md{font-size:76px;line-height:1.08}
     <p class="for rise d4">Prepared for <b>Sr. Corazon DS. Manuel, OP</b> &ndash; Directress/Principal<br>First online exchange meeting &middot; October 2026</p>
   </div>
   <div class="hero">
-    <div class="photo"><img src="assets/img/plumeria.jpg" alt="Plumeria blossoms against a blue sky on the PPSH campus"></div>
+    <div class="photo"><img src="assets/img/plumeria.webp" alt="Plumeria blossoms against a blue sky on the PPSH campus"></div>
   </div>
 </section>
 
@@ -311,13 +313,13 @@ h2.md{font-size:76px;line-height:1.08}
     <li class="rise d2"><span class="n">II</span><span class="t">CSR &amp; PPSH</span><span class="d">Our students and the 8-session exchange curriculum</span></li>
     <li class="rise d3"><span class="n">III</span><span class="t">Ready to Do</span><span class="d">Connecting our teachers</span></li>
   </ol>
-  <div class="band photo"><img src="assets/img/campus-wide.jpg" alt="PPSH campus lawn and buildings" style="object-position:50% 58%"></div>
+  <div class="band photo"><img data-src="assets/img/campus-wide.webp" alt="PPSH campus lawn and buildings" style="object-position:50% 58%"></div>
 </section>
 
 <!-- 3 位置 -->
 <section class="slide where" data-label="About PPSH">
   <div class="mapwrap rise">
-    <img class="map" src="assets/img/taiwan-map.png" alt="Illustrated map of Taiwan">
+    <img class="map" data-src="assets/img/taiwan-map.webp" alt="Illustrated map of Taiwan">
     <i class="pin" id="pin"></i>
   </div>
   <div class="txt">
@@ -327,7 +329,7 @@ h2.md{font-size:76px;line-height:1.08}
     <p class="addr rise d3">No. 168, Juguang Rd., Pengcuo Village,<br>Yanpu Township, Pingtung County</p>
   </div>
   <div class="gate frame rise d2">
-    <div class="photo"><img src="assets/img/gate.jpg" alt="PPSH school gate with a colorful tree sculpture"></div>
+    <div class="photo"><img data-src="assets/img/gate.webp" alt="PPSH school gate with a colorful tree sculpture"></div>
     <span class="cap">The school gate</span>
   </div>
 </section>
@@ -341,10 +343,10 @@ h2.md{font-size:76px;line-height:1.08}
     </div>
   </div>
   <div class="mosaic">
-    <div class="photo a rise d1"><img src="assets/img/trees-bridge.jpg" alt="Shaded lawn with a covered walkway"></div>
-    <div class="photo b rise d2"><img src="assets/img/building-green.jpg" alt="Classroom building framed by trees" style="object-position:50% 40%"></div>
-    <div class="photo d rise d3"><img src="assets/img/sculpture-sunset.jpg" alt="Sculpture on the lawn in evening light" style="object-position:50% 60%"></div>
-    <div class="photo c rise d3"><img src="assets/img/white-block.jpg" alt="White building with frangipani trees" style="object-position:50% 35%"></div>
+    <div class="photo a rise d1"><img data-src="assets/img/trees-bridge.webp" alt="Shaded lawn with a covered walkway"></div>
+    <div class="photo b rise d2"><img data-src="assets/img/building-green.webp" alt="Classroom building framed by trees" style="object-position:50% 40%"></div>
+    <div class="photo d rise d3"><img data-src="assets/img/sculpture-sunset.webp" alt="Sculpture on the lawn in evening light" style="object-position:50% 60%"></div>
+    <div class="photo c rise d3"><img data-src="assets/img/white-block.webp" alt="White building with frangipani trees" style="object-position:50% 35%"></div>
   </div>
 </section>
 
@@ -408,7 +410,7 @@ h2.md{font-size:76px;line-height:1.08}
       <li>Accounting &amp; Statistics Office</li>
     </ul>
   </div>
-  <div class="photo-r frame rise d3"><div class="photo"><img src="assets/img/aerial.jpg" alt="Aerial view of PPSH courtyards and buildings"></div></div>
+  <div class="photo-r frame rise d3"><div class="photo"><img data-src="assets/img/aerial.webp" alt="Aerial view of PPSH courtyards and buildings"></div></div>
 </section>
 
 <!-- 8 科別與專班 -->
@@ -458,7 +460,7 @@ h2.md{font-size:76px;line-height:1.08}
       <p class="cap"><small>Recorded &mdash; out of 160 students</small>admitted to National Taiwan University</p>
     </div>
   </div>
-  <div class="photo-r"><div class="photo"><img src="assets/img/cosmos.jpg" alt="Cosmos flowers in front of a campus building" style="object-position:50% 70%"></div></div>
+  <div class="photo-r"><div class="photo"><img data-src="assets/img/cosmos.webp" alt="Cosmos flowers in front of a campus building" style="object-position:50% 70%"></div></div>
 </section>
 
 <!-- 10 未來去向 -->
@@ -493,12 +495,12 @@ h2.md{font-size:76px;line-height:1.08}
     <h2 class="rise d1" style="margin-top:32px"><em>CSR</em> &amp;<br>PPSH</h2>
     <p class="rise d2">Our students, our curriculum, our first steps together.</p>
     <div class="logos rise d3">
-      <span class="disc"><img src="assets/logo/ppsh-logo.png" alt="PPSH logo"></span>
+      <span class="disc"><img data-src="assets/logo/ppsh-logo.webp" alt="PPSH logo"></span>
       <span class="x">&times;</span>
-      <span class="disc"><img src="assets/logo/csr-logo.png" alt="CSR-Makati logo"></span>
+      <span class="disc"><img data-src="assets/logo/csr-logo.webp" alt="CSR-Makati logo"></span>
     </div>
   </div>
-  <div class="photo-r"><div class="photo"><img src="assets/img/courtyard.jpg" alt="Shaded courtyard at PPSH" style="object-position:35% 50%"></div></div>
+  <div class="photo-r"><div class="photo"><img data-src="assets/img/courtyard.webp" alt="Shaded courtyard at PPSH" style="object-position:35% 50%"></div></div>
 </section>
 
 <!-- 12 參與學生 -->
@@ -510,7 +512,7 @@ h2.md{font-size:76px;line-height:1.08}
     <div class="row rise d3"><span class="k">Program Structure</span><span class="v">2 cohorts<small>One Grade 11 class &amp; one Grade 12 class</small></span></div>
     <div class="row rise d4"><span class="k">Program</span><span class="v">Business Program</span></div>
   </div>
-  <div class="band frame rise d4"><div class="photo" style="width:100%;height:100%"><img src="assets/img/white-block.jpg" alt="PPSH white building with frangipani trees" style="object-position:40% 50%"></div></div>
+  <div class="band frame rise d4"><div class="photo" style="width:100%;height:100%"><img data-src="assets/img/white-block.webp" alt="PPSH white building with frangipani trees" style="object-position:40% 50%"></div></div>
 </section>
 
 <!-- 13 商業學程 -->
@@ -527,7 +529,7 @@ h2.md{font-size:76px;line-height:1.08}
       <ul><li>Computer Software Application</li><li>Accounting</li></ul>
     </div>
   </div>
-  <img class="sketch" src="assets/img/sketch-building.png" alt="" aria-hidden="true">
+  <img class="sketch" data-src="assets/img/sketch-building.webp" alt="" aria-hidden="true">
 </section>
 
 <!-- 14 課綱概覽 -->
@@ -547,7 +549,7 @@ h2.md{font-size:76px;line-height:1.08}
     <div class="node proj"><div class="dot">7</div><h4>Taiwan &times; Philippines Project</h4><small>Session</small></div>
     <div class="node proj"><div class="dot">8</div><h4>Project Presentation</h4><small>Session</small></div>
   </div>
-  <div class="sketch"><img src="assets/img/sketch-wide.png" alt="" aria-hidden="true"></div>
+  <div class="sketch"><img data-src="assets/img/sketch-wide.webp" alt="" aria-hidden="true"></div>
 </section>
 
 <!-- 15 課綱明細 -->
@@ -574,18 +576,18 @@ h2.md{font-size:76px;line-height:1.08}
     <p class="ready rise d2">Ready <span>to Do</span></p>
     <p class="join rise d3">Please join the teachers&rsquo; group.</p>
     <div class="logos rise d4">
-      <img src="assets/logo/ppsh-logo.png" alt="PPSH logo"><img src="assets/logo/csr-logo.png" alt="CSR-Makati logo">
+      <img data-src="assets/logo/ppsh-logo.webp" alt="PPSH logo"><img data-src="assets/logo/csr-logo.webp" alt="CSR-Makati logo">
     </div>
   </div>
   <div class="qrcol rise d2">
-    <div class="qr"><img src="assets/img/teachers-group-qr.png" alt="QR code to join the teachers' LINE group"></div>
+    <div class="qr"><img data-src="assets/img/teachers-group-qr.webp" alt="QR code to join the teachers' LINE group"></div>
     <p>Scan to join the teachers&rsquo; group</p>
   </div>
 </section>
 
 <!-- 共用頁尾 -->
 <div id="chrome">
-  <div class="brand"><img src="assets/logo/ppsh-logo.png" alt=""><span class="sep">&times;</span><img src="assets/logo/csr-logo.png" alt=""><span id="label">PPSH &times; CSR</span></div>
+  <div class="brand"><img src="assets/logo/ppsh-logo.webp" alt=""><span class="sep">&times;</span><img src="assets/logo/csr-logo.webp" alt=""><span id="label">PPSH &times; CSR</span></div>
   <div class="ctrl">
     <button id="prev" aria-label="Previous slide" title="Previous (←)">&#8249;</button>
     <span class="num" id="num">1 / 16</span>
@@ -637,6 +639,25 @@ h2.md{font-size:76px;line-height:1.08}
   }
   animateDonut(false);
 
+  /* 圖片延遲載入：先載入目前頁與接下來兩頁，其餘在閒置時依序預載（網路慢時封面先出現） */
+  function loadImgs(i){
+    if(i<0||i>=slides.length) return;
+    [].slice.call(slides[i].querySelectorAll('img[data-src]')).forEach(function(im){
+      var src=im.getAttribute('data-src'); im.removeAttribute('data-src');
+      im.addEventListener('load',function(){im.classList.add('ld')});
+      im.addEventListener('error',function(){im.classList.add('ld')});
+      im.src=src;
+    });
+  }
+  function warm(){
+    var k=0;
+    (function tick(){
+      if(k>=slides.length) return;
+      loadImgs(k++); setTimeout(tick,600);
+    })();
+  }
+  if(document.readyState==='complete') warm(); else window.addEventListener('load',warm);
+
   function maxSteps(i){return +(slides[i].dataset.steps||0);}
   function applySteps(i,s){
     [].slice.call(slides[i].querySelectorAll('[data-step]')).forEach(function(el){
@@ -645,6 +666,7 @@ h2.md{font-size:76px;line-height:1.08}
   }
   function show(i,s){
     cur=Math.max(0,Math.min(slides.length-1,i));
+    loadImgs(cur);loadImgs(cur+1);loadImgs(cur+2);
     step=s==null?0:s;
     slides.forEach(function(el,k){el.classList.toggle('active',k===cur)});
     applySteps(cur,step);
