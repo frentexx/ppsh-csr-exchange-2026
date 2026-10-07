@@ -97,40 +97,32 @@ h2.md{font-size:76px;line-height:1.08}
 .cover .sub{font-size:var(--text-lg);line-height:1.4;margin-top:var(--space-4);max-width:24ch;color:var(--ink)}
 .cover .for{margin-top:var(--space-4);padding-top:var(--space-3);border-top:1px solid var(--rule);font-size:28px;line-height:1.5;color:var(--muted);max-width:30em}
 .cover .for b{color:var(--ink);font-weight:600}
-.cover .aim{font-family:var(--font-display);font-style:italic;font-size:34px;color:var(--rose);margin-top:var(--space-3)}
 .cover .hero{position:absolute;right:0;top:0;bottom:0;width:800px}
 .cover .hero .photo{position:absolute;inset:0}
 .cover .hero .photo img{object-position:60% 50%}
 .cover .hero .tag{position:absolute;left:-1px;bottom:120px;background:var(--paper);padding:22px 36px 22px 32px;font-size:var(--text-sm);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
 
-/* ========== 2 議程 ========== */
-.agenda .head{display:flex;justify-content:space-between;align-items:flex-end}
-.agenda ol{list-style:none;margin-top:var(--space-5);max-width:1500px}
-.agenda li{display:grid;grid-template-columns:120px 560px 1fr;align-items:baseline;gap:var(--space-3);padding:30px 0;border-top:1px solid var(--rule)}
-.agenda li:last-child{border-bottom:1px solid var(--rule)}
-.agenda .n{font-family:var(--font-display);font-size:56px;color:var(--rose)}
-.agenda .t{font-family:var(--font-display);font-size:52px;font-weight:700}
-.agenda .d{font-size:var(--text-md);color:var(--muted);line-height:1.4}
-.agenda .band{position:absolute;left:0;right:0;bottom:78px;height:230px}
-.agenda .band img{filter:saturate(.92)}
-
 /* ========== 3 位置 ========== */
-.where .mapwrap{position:absolute;left:120px;top:96px;bottom:150px;width:520px}
-.where .mapwrap img.map{height:100%;width:auto;margin:0 auto;opacity:.95}
-.where .pin{position:absolute;width:30px;height:30px;border-radius:50%;background:var(--rose);box-shadow:0 0 0 8px rgba(184,68,127,.25);transform:translate(-50%,-50%)}
-.where .pin::after{content:"";position:absolute;inset:-8px;border-radius:50%;border:2px solid var(--rose);animation:ping 2.4s ease-out infinite}
-@keyframes ping{from{transform:scale(.8);opacity:1}to{transform:scale(2.4);opacity:0}}
-.where .txt{position:absolute;left:700px;top:96px;width:470px}
-.where .txt .lead{margin-top:var(--space-4)}
-.where .txt .addr{margin-top:var(--space-5);padding-top:var(--space-3);border-top:1px solid var(--rule);font-size:26px;line-height:1.55;color:var(--muted)}
-.where .gate{position:absolute;right:120px;top:130px;width:580px;height:760px}
+.where .mapwrap{position:absolute;left:120px;top:96px;bottom:130px;width:620px}
+.where .mapwrap img.map{position:absolute;left:70px;top:0;height:100%;width:auto}
+.where .pin{position:absolute;width:32px;height:32px;border-radius:50%;transform:translate(-50%,-50%);border:3px solid #fff;z-index:3}
+.where .pin.ppsh{background:var(--rose);box-shadow:0 0 0 6px rgba(184,68,127,.3)}
+.where .pin.thit{background:var(--navy);box-shadow:0 0 0 6px rgba(36,58,122,.3)}
+.where .pin::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:2px solid currentColor;animation:ping 2.4s ease-out infinite}
+.where .pin.ppsh::after{color:var(--rose)}.where .pin.thit::after{color:var(--navy);animation-delay:1.2s}
+@keyframes ping{from{transform:scale(.8);opacity:1}to{transform:scale(2.2);opacity:0}}
+.where .chip{position:absolute;transform:translate(-100%,-50%);font-weight:700;font-size:28px;line-height:1;letter-spacing:.12em;color:#fff;padding:11px 18px;z-index:3}
+.where .chip.ppsh{background:var(--rose);--c:var(--rose)}
+.where .chip.thit{background:var(--navy);--c:var(--navy)}
+.where .chip::after{content:"";position:absolute;left:100%;top:50%;width:56px;height:3px;background:var(--c);transform:translateY(-50%)}
+.where .txt{position:absolute;left:800px;top:96px;width:1000px}
+.where .gate{position:absolute;left:800px;right:120px;top:320px;bottom:130px}
 .where .gate .photo{width:100%;height:100%}
-.where .gate .photo img{object-position:46% 50%}
-.where .cap{position:absolute;left:0;bottom:-62px;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.where .gate .photo img{object-position:46% 52%}
 
 /* ========== 4 校園 ========== */
 .campus .head{display:flex;align-items:flex-end;justify-content:space-between}
-.mosaic{position:absolute;left:120px;right:120px;top:300px;bottom:112px;display:grid;grid-template-columns:1.5fr 1fr 0.8fr;grid-template-rows:1fr 1fr;gap:18px}
+.mosaic{position:absolute;left:120px;right:120px;top:190px;bottom:112px;display:grid;grid-template-columns:1.5fr 1fr 0.8fr;grid-template-rows:1fr 1fr;gap:18px}
 .mosaic .a{grid-row:1/3}.mosaic .d{grid-row:1/3}
 .mosaic .photo{position:relative}
 .mosaic .photo img{transition:transform 1.2s ease}
@@ -152,15 +144,6 @@ h2.md{font-size:76px;line-height:1.08}
 .step.s3 .ring small{color:#fbe6f1}
 .note{font-size:26px;color:var(--muted);line-height:1.5;max-width:24em;margin-top:var(--space-4)}
 
-/* ========== 6 學程 ========== */
-.paths .intro{display:flex;justify-content:space-between;align-items:flex-end}
-.paths .intro .lead{font-size:32px;max-width:26em;text-align:left}
-.paths .cols{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);margin-top:var(--space-5)}
-.paths h3{font-size:34px;letter-spacing:.14em;text-transform:uppercase;font-family:var(--font-body);color:var(--rose);font-weight:700;padding-bottom:var(--space-2);border-bottom:2px solid var(--ink)}
-.paths .row{padding:var(--space-3) 0;border-bottom:1px solid var(--rule)}
-.paths .row b{display:block;font-family:var(--font-display);font-size:42px;margin-bottom:8px}
-.paths .row p{font-size:28px;line-height:1.45;color:var(--muted)}
-
 /* ========== 7 處室 ========== */
 .admin .list{position:absolute;left:120px;top:330px;width:880px}
 .admin .tree{list-style:none;border-left:3px solid var(--ink);margin-left:6px}
@@ -172,13 +155,10 @@ h2.md{font-size:76px;line-height:1.08}
 .admin .photo-r .photo img{object-position:30% 50%}
 
 /* ========== 8 科別 ========== */
-.depts .cols{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:var(--space-5);margin-top:var(--space-5)}
-.depts h3{font-family:var(--font-body);font-size:28px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);padding-bottom:var(--space-2);border-bottom:2px solid var(--ink);margin-bottom:var(--space-2)}
-.depts ul{list-style:none}
-.depts li{font-size:36px;line-height:1.25;padding:16px 0;border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;gap:16px}
-.depts li.hl{font-family:var(--font-display);font-weight:700}
-.depts li .tagx{flex:none;font-family:var(--font-body);font-size:20px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--rose);padding:6px 12px}
-.depts .sub{font-size:var(--text-md);color:var(--muted);margin-top:var(--space-2)}
+.depts .cols{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);margin-top:var(--space-5)}
+.depts ul{list-style:none;border-top:2px solid var(--ink)}
+.depts li{font-size:38px;line-height:1.25;padding:20px 0;border-bottom:1px solid var(--rule)}
+.depts li.hl{font-family:var(--font-display);font-weight:700;font-size:44px;color:var(--ink)}
 
 /* ========== 9 成果 ========== */
 .stats .left{position:absolute;left:120px;top:96px;width:1000px}
@@ -286,61 +266,39 @@ h2.md{font-size:76px;line-height:1.08}
 <section class="slide cover" data-label="School Presentation">
   <div class="left">
     <div class="logos rise">
-      <figure><img src="assets/logo/ppsh-logo.webp" alt="National PingPei Senior High School logo"><figcaption>PPSH<br>Pingtung, Taiwan</figcaption></figure>
+      <figure><img src="assets/logo/ppsh-logo.webp" alt="National PingPei Senior High School logo"><figcaption>PPSH</figcaption></figure>
       <span class="vr"></span>
-      <figure><img src="assets/logo/csr-logo.webp" alt="Colegio de Sta. Rosa-Makati logo"><figcaption>CSR<br>Makati, Philippines</figcaption></figure>
+      <figure><img src="assets/logo/csr-logo.webp" alt="Colegio de Sta. Rosa-Makati logo"><figcaption>CSR</figcaption></figure>
     </div>
     <h1 class="rise d1">National PingPei<br><em>Senior High</em> School</h1>
-    <p class="sub rise d2">School Presentation for Colegio de Sta. Rosa&#8209;Makati</p>
-    <p class="aim rise d3">Nurturing the whole person &mdash; a shared aim.</p>
-    <p class="for rise d4">Prepared for <b>Sr. Corazon DS. Manuel, OP</b> &ndash; Directress/Principal<br>First online exchange meeting &middot; October 2026</p>
+    <p class="sub rise d2">School Presentation</p>
+    <p class="for rise d3">First online exchange meeting &middot; October 2026</p>
   </div>
   <div class="hero">
     <div class="photo"><img src="assets/img/plumeria.webp" alt="Plumeria blossoms against a blue sky on the PPSH campus"></div>
   </div>
 </section>
 
-<!-- 2 議程 -->
-<section class="slide agenda" data-label="Welcome">
-  <div class="head rise">
-    <div>
-      <div class="eyebrow"><span class="tri"><i></i><i></i><i></i></span>Welcome</div>
-      <h2>Today&rsquo;s Conversation</h2>
-    </div>
-  </div>
-  <ol>
-    <li class="rise d1"><span class="n">I</span><span class="t">About PPSH</span><span class="d">Our school, programs and graduates</span></li>
-    <li class="rise d2"><span class="n">II</span><span class="t">CSR &amp; PPSH</span><span class="d">Our students and the 8-session exchange curriculum</span></li>
-    <li class="rise d3"><span class="n">III</span><span class="t">Ready to Do</span><span class="d">Connecting our teachers</span></li>
-  </ol>
-  <div class="band photo"><img data-src="assets/img/campus-wide.webp" alt="PPSH campus lawn and buildings" style="object-position:50% 58%"></div>
-</section>
-
 <!-- 3 位置 -->
 <section class="slide where" data-label="About PPSH">
   <div class="mapwrap rise">
-    <img class="map" data-src="assets/img/taiwan-map.webp" alt="Illustrated map of Taiwan">
-    <i class="pin" id="pin"></i>
+    <img class="map" id="map" data-src="assets/img/taiwan-map.webp" alt="Illustrated map of Taiwan with the locations of PPSH and THIT">
+    <span class="chip ppsh" id="chipP">PPSH</span><i class="pin ppsh" id="pinP"></i>
+    <span class="chip thit" id="chipT">THIT</span><i class="pin thit" id="pinT"></i>
   </div>
   <div class="txt">
     <div class="eyebrow rise"><span class="tri"><i></i><i></i><i></i></span>About PPSH</div>
-    <h2 class="rise d1">Southern<br>Taiwan</h2>
-    <p class="lead rise d2">Pingtung County &mdash; where our school grows among open fields and mountain views.</p>
-    <p class="addr rise d3">No. 168, Juguang Rd., Pengcuo Village,<br>Yanpu Township, Pingtung County</p>
+    <h2 class="rise d1">Southern Taiwan</h2>
   </div>
   <div class="gate frame rise d2">
     <div class="photo"><img data-src="assets/img/gate.webp" alt="PPSH school gate with a colorful tree sculpture"></div>
-    <span class="cap">The school gate</span>
   </div>
 </section>
 
 <!-- 4 校園 -->
 <section class="slide campus" data-label="About PPSH">
   <div class="head rise">
-    <div>
-      <div class="eyebrow"><span class="tri"><i></i><i></i><i></i></span>About PPSH</div>
-      <h2 class="md">Our Campus</h2>
-    </div>
+    <div class="eyebrow"><span class="tri"><i></i><i></i><i></i></span>About PPSH</div>
   </div>
   <div class="mosaic">
     <div class="photo a rise d1"><img data-src="assets/img/trees-bridge.webp" alt="Shaded lawn with a covered walkway"></div>
@@ -360,7 +318,6 @@ h2.md{font-size:76px;line-height:1.08}
       <li>Self-discovery and diverse career exploration</li>
       <li>Interests, strengths and future goals</li>
     </ul>
-    <p class="note rise d3">Students choose a program at the start of Grade 11, according to their interests, dispositions and abilities.</p>
   </div>
   <div class="stairs">
     <svg class="path" viewBox="0 0 760 800" preserveAspectRatio="none" aria-hidden="true">
@@ -369,28 +326,6 @@ h2.md{font-size:76px;line-height:1.08}
     <div class="step s1" data-step="1"><div class="ring">10th<small>Grade</small></div><div class="lbl">Flexible Exploration</div></div>
     <div class="step s2" data-step="2"><div class="ring">11th<br>&amp; 12th<small>Grade</small></div><div class="lbl">Specialized Pathways</div></div>
     <div class="step s3" data-step="3"><div class="ring">&#10003;</div><div class="lbl">Multi&#8209;Faceted University &amp; Career Preparation</div></div>
-  </div>
-</section>
-
-<!-- 6 學程（A4 簡介補充） -->
-<section class="slide paths" data-label="About PPSH">
-  <div class="intro rise">
-    <div>
-      <div class="eyebrow"><span class="tri"><i></i><i></i><i></i></span>About PPSH</div>
-      <h2 class="md">Academic &amp; Specialized Programs</h2>
-    </div>
-  </div>
-  <div class="cols">
-    <div class="rise d1">
-      <h3>Academic Programs</h3>
-      <div class="row"><b>Human&#8209;Society Major</b><p>Chinese and foreign history and geography and the humanities &mdash; leading to business, humanities and law departments, or military and police officer schools.</p></div>
-      <div class="row"><b>Science&#8209;Engineering Major</b><p>Chemistry, physics, biology and earth science &mdash; leading to science&#8209;engineering and medical&#8209;agricultural departments, or military and police officer schools.</p></div>
-    </div>
-    <div class="rise d2">
-      <h3>Specialized Programs</h3>
-      <div class="row"><b>Business Program</b><p>Professional knowledge of accounting, business and marketing, with camps on sales and marketing to experience the skills first&#8209;hand.</p></div>
-      <div class="row"><b>Catering Program</b><p>Professional knowledge of baking and beverage making, with baking and cooking camps to experience the skills first&#8209;hand.</p></div>
-    </div>
   </div>
 </section>
 
@@ -418,32 +353,21 @@ h2.md{font-size:76px;line-height:1.08}
   <div class="eyebrow rise"><span class="tri"><i></i><i></i><i></i></span>About PPSH</div>
   <h2 class="md rise d1">Academic Departments &amp; Vocational Tracks</h2>
   <div class="cols">
-    <div class="rise d2">
-      <h3>Vocational Tracks</h3>
-      <ul>
-        <li class="hl">Business Program <span class="tagx">CSR class</span></li>
-        <li class="hl">Catering Program</li>
-      </ul>
-    </div>
-    <div class="rise d3">
-      <h3>Specialty &amp; Experimental Classes</h3>
-      <ul>
-        <li class="hl">Indigenous &ldquo;Little Tsing Hua&rdquo; Specialty Class</li>
-        <li>Athletic Specialty Class (Sports Class)</li>
-        <li>Smart Green Agriculture Technology Experimental Class</li>
-      </ul>
-    </div>
-    <div class="rise d4">
-      <h3>Academic Departments</h3>
-      <ul>
-        <li>Chinese Language &amp; Literature</li>
-        <li>English Language &amp; Literature</li>
-        <li>Mathematics</li>
-        <li>Social Studies</li>
-        <li>Natural Sciences</li>
-        <li>Arts, Health &amp; Physical Education</li>
-      </ul>
-    </div>
+    <ul class="rise d2">
+      <li class="hl">Business Program</li>
+      <li class="hl">Catering Program</li>
+      <li class="hl">Indigenous Taiwanese Division</li>
+      <li>Athletic Specialty Class (Sports Class)</li>
+      <li>Smart Green Agriculture Technology Experimental Class</li>
+    </ul>
+    <ul class="rise d3">
+      <li>Chinese Language &amp; Literature</li>
+      <li>English Language &amp; Literature</li>
+      <li>Mathematics</li>
+      <li>Social Studies</li>
+      <li>Natural Sciences</li>
+      <li>Arts, Health &amp; Physical Education</li>
+    </ul>
   </div>
 </section>
 
@@ -457,7 +381,7 @@ h2.md{font-size:76px;line-height:1.08}
     </div>
     <div class="stat rise d2" style="margin-top:24px;border-bottom:1px solid var(--rule)">
       <div class="big">3</div>
-      <p class="cap"><small>Recorded &mdash; out of 160 students</small>admitted to National Taiwan University</p>
+      <p class="cap"><small>Recorded</small>(out of 160) students admitted to National Taiwan University</p>
     </div>
   </div>
   <div class="photo-r"><div class="photo"><img data-src="assets/img/cosmos.webp" alt="Cosmos flowers in front of a campus building" style="object-position:50% 70%"></div></div>
@@ -480,9 +404,9 @@ h2.md{font-size:76px;line-height:1.08}
       <div class="mid"><div><b>Future</b>Path</div></div>
     </div>
     <ul class="legend rise d2">
-      <li><i class="sw" style="background:#243a7a"></i><span class="pct">55%</span><span class="nm">University</span></li>
-      <li><i class="sw" style="background:#b8447f"></i><span class="pct">25%</span><span class="nm">University of Technology</span></li>
-      <li><i class="sw" style="background:#d9a02f"></i><span class="pct">15%</span><span class="nm">Police &amp; Military Schools<small>TPC / Mil.</small></span></li>
+      <li><i class="sw" style="background:#243a7a"></i><span class="pct">55%</span><span class="nm">Uni.</span></li>
+      <li><i class="sw" style="background:#b8447f"></i><span class="pct">25%</span><span class="nm">Uni. of Tec.</span></li>
+      <li><i class="sw" style="background:#d9a02f"></i><span class="pct">15%</span><span class="nm">TPC / Mil.</span></li>
       <li><i class="sw" style="background:#3d8b47"></i><span class="pct">5%</span><span class="nm">Work</span></li>
     </ul>
   </div>
@@ -491,10 +415,8 @@ h2.md{font-size:76px;line-height:1.08}
 <!-- 11 章節：CSR & PPSH -->
 <section class="slide divider" data-label="CSR & PPSH" data-dark="1">
   <div class="left">
-    <div class="eyebrow rise"><span class="tri"><i></i><i></i><i></i></span>Part II</div>
-    <h2 class="rise d1" style="margin-top:32px"><em>CSR</em> &amp;<br>PPSH</h2>
-    <p class="rise d2">Our students, our curriculum, our first steps together.</p>
-    <div class="logos rise d3">
+    <h2 class="rise d1"><em>CSR</em> &amp;<br>PPSH</h2>
+    <div class="logos rise d2">
       <span class="disc"><img data-src="assets/logo/ppsh-logo.webp" alt="PPSH logo"></span>
       <span class="x">&times;</span>
       <span class="disc"><img data-src="assets/logo/csr-logo.webp" alt="CSR-Makati logo"></span>
@@ -555,11 +477,11 @@ h2.md{font-size:76px;line-height:1.08}
 <!-- 15 課綱明細 -->
 <section class="slide syld" data-label="CSR & PPSH">
   <div class="eyebrow rise"><span class="tri"><i></i><i></i><i></i></span>CSR &amp; PPSH</div>
-  <h2 class="md rise d1" style="font-size:60px;margin-top:12px">Syllabus &mdash; Session by Session</h2>
+  <h2 class="md rise d1" style="font-size:60px;margin-top:12px">Syllabus</h2>
   <div class="tbl rise d2">
     <div class="tr"><span class="no">1</span><span class="tp">Meet My School</span><span class="ds">My school and/or my city &amp; my story</span></div>
     <div class="tr"><span class="no">2</span><span class="tp">Food, Culture&hellip;</span><span class="ds">Representative culinary, clothes, living, traffic&hellip; culture</span></div>
-    <div class="tr"><span class="no">3</span><span class="tp">Customer &amp; Market</span><span class="ds">Target audience (TA): Who? Where?</span></div>
+    <div class="tr"><span class="no">3</span><span class="tp">Customer &amp; Market</span><span class="ds">TA, Who? Where?</span></div>
     <div class="tr"><span class="no">4</span><span class="tp">Brand Story</span><span class="ds">Craft a compelling brand story for a local food product of our/each others&rsquo; country</span></div>
     <div class="tr"><span class="no">5</span><span class="tp">Cost &amp; Pricing</span><span class="ds">Fundamental business concepts</span></div>
     <div class="tr"><span class="no">6</span><span class="tp">Social Media Marketing</span><span class="ds">Promote products using Instagram, Facebook, and short-form videos</span></div>
@@ -581,7 +503,6 @@ h2.md{font-size:76px;line-height:1.08}
   </div>
   <div class="qrcol rise d2">
     <div class="qr"><img data-src="assets/img/teachers-group-qr.webp" alt="QR code to join the teachers' LINE group"></div>
-    <p>Scan to join the teachers&rsquo; group</p>
   </div>
 </section>
 
@@ -612,16 +533,22 @@ h2.md{font-size:76px;line-height:1.08}
   }
   window.addEventListener('resize',fit); fit();
 
-  /* 地圖標記位置（以地圖圖片的百分比定位，南部屏東） */
-  function placePin(){
-    var wrap=document.querySelector('.mapwrap'), img=wrap.querySelector('img.map'), pin=document.getElementById('pin');
-    function go(){
-      var w=img.clientWidth,h=img.clientHeight,ox=(wrap.clientWidth-w)/2;
-      pin.style.left=(ox+w*0.47)+'px'; pin.style.top=(h*0.74)+'px';
-    }
-    if(img.complete) go(); else img.addEventListener('load',go);
+  /* 地圖標記：座標換算成地圖圖片的比例位置
+     PPSH 22.759N 120.544E（鹽埔）、THIT 22.486N 120.489E（南州），並依插圖海岸線微調 */
+  var PINS=[['pinP','chipP',0.342,0.744],['pinT','chipT',0.322,0.819]];
+  function placePins(){
+    var img=document.getElementById('map');
+    var w=img.clientWidth,h=img.clientHeight,ox=img.offsetLeft,oy=img.offsetTop;
+    if(!w) return;
+    PINS.forEach(function(p){
+      var x=ox+w*p[2], y=oy+h*p[3];
+      var pin=document.getElementById(p[0]), chip=document.getElementById(p[1]);
+      pin.style.left=x+'px'; pin.style.top=y+'px';
+      chip.style.left=(x-70)+'px'; chip.style.top=y+'px';
+    });
   }
-  placePin();
+  (function(){var img=document.getElementById('map'); img.addEventListener('load',placePins); if(img.complete&&img.naturalWidth) placePins();})();
+  window.addEventListener('resize',placePins);
 
   /* 甜甜圈圖：以 stroke-dasharray 畫出各段 */
   var C=2*Math.PI*274;
